@@ -40,6 +40,8 @@ export default defineConfig(({ mode }) => {
       ]
     },
     base: API_URL,
-    plugins: [react(), jsconfigPaths()]
+    plugins: [react(), jsconfigPaths()],  build: {
+      chunkSizeWarningLimit: 1000 // Set limit to 1000 kB
+    }
   };
 });
